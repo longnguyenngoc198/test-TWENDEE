@@ -1,0 +1,60 @@
+@use '../../../../scss/' as *;
+
+.fillter {
+    min-width: 160px;
+
+    h3 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-shadow: $text-shadow;
+    }
+    &__wrap {
+        background-color: #ccc;
+        width: 100%;
+        margin-top: 8px;
+        position: relative;
+        border-radius: 4px;
+    }
+
+    &__select {
+        font-weight: 500;
+        font-size: 1.8rem;
+        height: 28px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 0 8px;
+
+        border-radius: 4px;
+    }
+
+    &__list {
+        // display: none;
+        width: 100%;
+        margin-top: 2px;
+        border-radius: 4px;
+        position: absolute;
+        overflow: hidden;
+        z-index: 1000;
+        transition: $transition;
+        li {
+            display: flex;
+            align-items: center;
+            font-size: 1.8rem;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 4px 8px;
+
+            &:hover {
+                font-weight: 800;
+                background-color: $blue2;
+            }
+
+            span {
+                font-size: 1.5rem !important;
+                margin-left: 9px;
+            }
+        }
+    }
+}

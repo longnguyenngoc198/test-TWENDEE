@@ -1,0 +1,29 @@
+@use '../../../../scss/' as *;
+.search {
+    cursor: pointer;
+    position: relative;
+    // top: -35px;
+    left: 40%;
+    z-index: 10000;
+    max-width: 260px;
+    height: 100%;
+    // width: 100%;
+    display: flex;
+    align-items: center;
+    box-shadow: $shadow-bg;
+    padding: 4px 6px;
+    justify-content: center;
+    border-radius: 40px;
+    filter: brightness(0.9);
+    // background-color: $yellow;
+    h3 {
+        font-size: 1.8rem;
+        font-weight: 600;
+        text-shadow: $text-shadow;
+        margin-left: 4px;
+    }
+    &:hover {
+        font-size: 500;
+        filter: brightness(1);
+    }
+}

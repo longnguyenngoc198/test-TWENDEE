@@ -1,0 +1,60 @@
+@use './scss/' as *;
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: none;
+    user-select: none;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,400;1,500&family=Poppins:wght@500;600&display=swap');
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size: 1.6rem;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed; //chưa load xong font chữ, tối ưu sao cho hiển thị nhanh nhất
+}
+ul {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+ul > li {
+    margin: 0;
+    padding: 0;
+}
+
+.darkTheme {
+    background-color: $bg-darkthem;
+    color: $while;
+    box-shadow: $shadow-bg;
+    transition: $transition;
+}
+.lightTheme {
+    background-color: $while;
+    color: #111;
+    box-shadow: $shadow-bg;
+    transition: $transition;
+}
+
+.App {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1280px;
+    display: block;
+    margin: 0 auto;
+    padding: 0 12px;
+}
+.ps__rail-y {
+    display: none;
+}

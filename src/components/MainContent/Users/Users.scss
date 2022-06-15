@@ -1,0 +1,66 @@
+@use '../../../scss/' as *;
+
+.users {
+    height: 70vh;
+    margin-top: 15px;
+    padding: 0 4rem;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+    transition: $transition;
+    cursor: pointer;
+    @media screen and (max-width: 1024px) {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+    }
+    @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+    @media screen and (max-width: 680px) {
+        grid-template-columns: repeat(1, auto);
+    }
+
+    .users__item {
+        max-width: 220px;
+        width: 100%;
+        filter: brightness(1);
+        overflow: hidden !important;
+        border-radius: 4px;
+        margin-bottom: 12px;
+        box-shadow: $box-shadow;
+        // background-color: $while;
+        &:hover {
+            filter: brightness(0.9);
+        }
+        &__avatar {
+            width: 100%;
+            height: 50px;
+        }
+        img {
+            width: 100%;
+            height: 200px;
+            transition: $transition;
+        }
+    }
+}
+
+.info {
+    padding: 10px 16px;
+    height: 220px;
+    h3 {
+        margin: 12px 0 36px;
+        font-size: 1.8rem;
+        font-weight: bold;
+        height: 36px;
+    }
+    p {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin: 4px 0;
+        span {
+            font-weight: 400;
+        }
+    }
+}

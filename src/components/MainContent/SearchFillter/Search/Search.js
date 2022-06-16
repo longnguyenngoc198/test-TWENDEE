@@ -3,6 +3,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { ImSortAlphaDesc } from 'react-icons/im';
 import './Search.scss';
 const Search = ({ data }) => {
+    console.log(data);
     const themeContext = useContext(ThemeContext);
     const [state, setSate] = useState(data);
     const handleSort = () => {
@@ -29,7 +30,7 @@ const Search = ({ data }) => {
 
     return (
         <div className={`search ${themeContext.theme}`} onClick={handleSort}>
-            <ImSortAlphaDesc></ImSortAlphaDesc>
+            {/* <ImSortAlphaDesc></ImSortAlphaDesc> */}
             <h3 className="search__title">Sort A to Z by Name</h3>
         </div>
     );

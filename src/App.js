@@ -10,13 +10,12 @@ function App() {
         <div className={`App ${themeContext.theme}`}>
             <BrowserRouter>
                 <Header />
-
                 <Routes>
                     <Route exact path="/" element={<MainContent />} />
                     <Route path="/page/:pageNumber" element={<MainContent />} />
                     <Route path="/api" element={<UserDetail />} />
                 </Routes>
-                <Footer />
+                {/* <Footer /> */}
             </BrowserRouter>
         </div>
     );

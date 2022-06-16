@@ -1,5 +1,5 @@
 import React from 'react';
-import Search from './Search/Search';
+import Sort from './Search/Search';
 import Fillter from './Fillter/Fillter';
 import './SearchFillter.scss';
 
@@ -9,6 +9,7 @@ const SearchFillter = (props) => {
     return (
         <div className="search-fillter-container">
             <Fillter parent={parent} />
+            <Sort data={dataFromUser} />
         </div>
     );
 };
